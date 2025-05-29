@@ -4,33 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سـحابـة ستور</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #2f2f2f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #67c2ff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1c1c1c;
+    }
+
+    .section {
+      padding: 50px 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #3b3b3b;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .section:hover {
+      box-shadow: 0 0 20px rgba(103,194,255,0.3);
+    }
+
+    h1, h2 {
+      color: #67c2ff;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    input, select, textarea, button {
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      background-color: #4e4e4e;
+      color: white;
+      outline: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      background-color: #67c2ff;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #4aabd9;
+    }
+
+    #output {
+      margin-top: 20px;
+      background-color: #2b2b2b;
+      padding: 20px;
+      border-radius: 8px;
+      color: #aaffff;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #67c2ff;
+      padding: 15px;
+      margin-top: 40px;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <img src="logo.png" alt="شعار سـحابـة ستور" class="logo">
     <nav>
       <ul>
         <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#discord">خدمات الديسكورد</a></li>
-        <li><a href="#gta">خدمات قراند</a></li>
-        <li><a href="#fivem">برمجة فايف إم</a></li>
-        <li><a href="#order">نموذج طلب</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="#discord">ديسكورد</a></li>
+        <li><a href="#gta">قراند</a></li>
+        <li><a href="#fivem">فايف إم</a></li>
+        <li><a href="#order">طلب</a></li>
+        <li><a href="#contact">تواصل</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="home" class="section">
     <h1>مرحبًا بك في سـحابـة ستور</h1>
-    <p>أفضل متجر لخدمات الديسكورد وقراند وبرمجة فايف إم.</p>
+    <p>متجر متخصص في خدمات <strong>الديسكورد</strong>، <strong>قراند</strong>، و<strong>برمجة فايف إم</strong> باحترافية.</p>
   </section>
 
   <section id="discord" class="section">
     <h2>خدمات الديسكورد</h2>
     <ul>
       <li>برمجة بوتات احترافية</li>
-      <li>تصميم سيرفرات متكاملة</li>
+      <li>تصميم سيرفرات كاملة</li>
       <li>تصميم شعارات وبنرات</li>
     </ul>
   </section>
@@ -39,51 +167,66 @@
     <h2>خدمات قراند</h2>
     <ul>
       <li>بيع مودات وسكنات</li>
-      <li>خدمات خاصة بالسيرفرات</li>
-      <li>تعديلات حصرية</li>
+      <li>ملفات خاصة بالسيرفرات</li>
+      <li>تعديلات حصرية حسب الطلب</li>
     </ul>
   </section>
 
   <section id="fivem" class="section">
     <h2>برمجة فايف إم</h2>
     <ul>
-      <li>سكربتات مخصصة</li>
-      <li>لوحات تحكم</li>
-      <li>أنظمة كاملة للمدن</li>
+      <li>برمجة سكربتات مخصصة</li>
+      <li>لوحات تحكم وواجهات</li>
+      <li>أنظمة متقدمة للمدن</li>
     </ul>
   </section>
 
   <section id="order" class="section">
-    <h2>نموذج الطلب</h2>
+    <h2>نموذج طلب خدمة</h2>
     <form id="orderForm">
-      <label>الاسم:</label>
-      <input type="text" name="name" required>
-      <label>نوع الخدمة:</label>
-      <select name="service">
+      <input type="text" name="name" placeholder="الاسم" required>
+      <select name="service" required>
+        <option value="">اختر نوع الخدمة</option>
         <option>خدمة ديسكورد</option>
         <option>خدمة قراند</option>
         <option>برمجة فايف إم</option>
       </select>
-      <label>تفاصيل الطلب:</label>
-      <textarea name="details" required></textarea>
-      <button type="submit">إرسال</button>
+      <textarea name="details" placeholder="تفاصيل الطلب" required></textarea>
+      <button type="submit">إرسال الطلب</button>
     </form>
     <div id="output"></div>
   </section>
 
   <section id="contact" class="section">
     <h2>تواصل معنا</h2>
-    <p>لأي استفسار أو طلب خاص:</p>
+    <p>للتواصل أو الاستفسار:</p>
     <ul>
-      <li>واتساب: 0500000000</li>
-      <li>تيلجرام: @YourTelegram</li>
+      <li>📞 واتساب: 0500000000</li>
+      <li>✉️ تيليجرام: @YourTelegram</li>
     </ul>
   </section>
 
   <footer>
-    <p>جميع الحقوق محفوظة © سـحابـة ستور 2025</p>
+    جميع الحقوق محفوظة © سـحابـة ستور 2025
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = e.target.name.value;
+      const service = e.target.service.value;
+      const details = e.target.details.value;
+
+      document.getElementById("output").innerHTML = `
+        <h3>✅ تم إرسال الطلب بنجاح!</h3>
+        <p><strong>الاسم:</strong> ${name}</p>
+        <p><strong>الخدمة:</strong> ${service}</p>
+        <p><strong>تفاصيل:</strong> ${details}</p>
+      `;
+
+      e.target.reset();
+    });
+  </script>
+
 </body>
 </html>
